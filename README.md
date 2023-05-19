@@ -1,4 +1,5 @@
-Please refer to [getting_started.md][link-getting_started] for examples usage.
+WOL Example on W5100S-EVB-Pico
+Please refer to [getting_started.md][link-getting_started] for examples basic setting.
 
 
 
