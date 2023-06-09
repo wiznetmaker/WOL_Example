@@ -22,7 +22,8 @@ const uint8_t broadcast_ip[4] = {255, 255, 255, 255};
 
 void send_WOL_packet(uint8_t *mac_address) {
     uint8_t WOL_packet[102];
-    uint8_t socket_num;
+    int socket_num;
+    int result;
 
     // Create the magic packet
     for (int i = 0; i < 6; i++) {
@@ -34,7 +35,7 @@ void send_WOL_packet(uint8_t *mac_address) {
     }
 
     // Initialize a UDP socket
-    int socket_num = socket(0, Sn_MR_UDP, WOL_PORT, SF_IO_NONBLOCK);
+    socket_num = socket(0, Sn_MR_UDP, WOL_PORT, SF_IO_NONBLOCK);
     if (socket_num < 0) {
         // Handle error
         return;

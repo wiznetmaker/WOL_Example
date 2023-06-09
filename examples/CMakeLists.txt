@@ -1,1 +1,2 @@
 add_subdirectory(WOL_Example)
+add_subdirectory(WebServer_WOL_Example.c)
